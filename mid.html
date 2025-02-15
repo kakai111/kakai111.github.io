@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.I.D Houbung Labu.website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .logo {
+            max-width: 100px;
+            opacity: 0.85;
+            transition: opacity 0.5s ease;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1rem;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6a11cb;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2575fc;
+        }
+        .hidden {
+            display: none;
+        }
+        .content-page {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 1rem;
+            color: black;
+        }
+        .index-list {
+            list-style: none;
+            padding: 0;
+        }
+        .index-item {
+            background-color: #6a11cb;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .index-item:hover {
+            background-color: #2575fc;
+        }
+        .search-container {
+            text-align: right;
+            margin-bottom: 15px;
+        }
+        #search-input {
+            padding: 10px;
+            width: 70%;
+            border: none;
+            border-radius: 5px;
+        }
+        #search-btn {
+            padding: 10px;
+            background-color: #6a11cb;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        #search-btn:hover {
+            background-color: #2575fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="mic.logo.jpg" alt="Gospel Hymn Book Logo" class="logo">
+            <h1>Messianic Houbung La</h1>
+        </header>
+        <div id="register-login-section">
+            <div id="register-section">
+                <h2>Register</h2>
+                <label for="register-username">Username</label>
+                <input type="text" id="register-username" placeholder="Enter your username">
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" placeholder="Enter your password">
+                <button id="register-btn">Register</button>
+            </div>
+            <hr>
+            <div id="login-section">
+                <h2>Login</h2>
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" placeholder="Enter your username">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" placeholder="Enter your password">
+                <button id="login-btn">Login</button>
+            </div>
+        </div>
+        <div id="content-section" class="hidden">
+            <nav>
+                <a href="#" id="index-link">Index</a>
+            </nav>
+            <p>You can now access your content here. Feel free to edit or add your Gospel Hymn songs as needed.</p>
+        </div>
+        <div id="index-section" class="hidden content-page">
+            <h2>INDEX (HOLBAINA)</h2>
+            <p>A :</p>
+            <ul class="index-list" id="index-list">
+                <li class="index-item" data-title="Abraham Isaac Jacob Elo">1. Abraham Isaac Jacob Elo</li>
+                <li class="index-item" data-title="Adam le Eve in Elo thungai louvin">2. Adam le Eve in Elo thungai louvin</li>
+                <li class="index-item" data-title="Adam sonten setlei chung hi">3. Adam sonten setlei chung hi</li>
+                <li class="index-item" data-title="Adam vang in gaosapna chang jong leu hen">4. Adam vang in gaosapna chang jong leu hen</li>
+                <li class="index-item" data-title="HATCHUNGNUNG ELO">5. Hatchungnung Elo</li>
+                <li class="index-item" data-title="GELTEM UVIN">6.Geltem uvin thu loupi pen li bou a um</li>
+                <li class="index-item" data-title="Ima jouse kagelkhom tieng leh">7. Ima jouse kagelkhom tieng leh</li>
+                <li class="index-item" data-title="Thupeh ijat um jeng jongle">8. Thupeh ijat um jeng jongle</li>
+                <li class="index-item" data-title="Elo nangma nathen bangin">9. Elo nangma nathen bangin</li>
+                <li class="index-item" data-title="Pan adei lhan acha min dia">10. Pan adei lhan acha min dia</li>
+            </ul>
+            <div id="hymn-entry-section" class="hidden">
+                <h3>Lyrics for: <span id="selected-title"></span></h3>
+                <textarea id="hymn-content" rows="10" cols="50" placeholder="Lyrics..."></textarea>
+            </div>
+        </div>
+    </div>
+    <script>
+        const registerBtn = document.getElementById('register-btn');
+        const loginBtn = document.getElementById('login-btn');
+        const registerSection = document.getElementById('register-section');
+        const loginSection = document.getElementById('login-section');
+        const contentSection = document.getElementById('content-section');
+        const indexSection = document.getElementById('index-section');
+        const indexList = document.getElementById('index-list');
+        const hymnEntrySection = document.getElementById('hymn-entry-section');
+        const selectedTitle = document.getElementById('selected-title');
+        const hymnContent = document.getElementById('hymn-content');
+        const indexLink = document.getElementById('index-link');
+
+        const users = [];
+
+        const hymnLyrics = {
+            "Abraham Isaac Jacob Elo": `
+1. Abraham Isaac Jacob Elo,
+   Ami lungset hepi na jalin,
+   Twihing chu man beiyin kadontai,
+   Halleluyah Halleluyah.
+
+     Tuhin vang Elo'n na natong dingin,
+     Nei mangchan. }2x
+
+2. Gentheina tinchengin eibom ie,
+   Kakhol jinna Gentile gamthip a hin,
+   Kachang in thoh jou ponge hepa,
+   Nei panpin kapa nangin.(2x)
+
+3. Lhagao thuseidoh kageldohteng,
+   Kalunga hilchenna umtheilou,
+   Koibaham eihilchen thei dingah,
+   Pa nangin neihin chen in.(2x)
+
+     Tuhin vang Elo'n natong dingin,
+     Nei mangchan,
+     Hallelujah Halleluyah. }2x`,
+
+            "Adam vang in gaosapna chang jong leu hen": `
+1. Adam vang in gaosapna chang jong leu hen,
+   Yahshua tahsan chan chu kumsang din,
+   Kelngoinou le Moshe la (2x) ngeichu,
+   Sachim thei tapou vinte.
+
+       Thina le gentheina hol jongleu,
+       Mu talou ding,
+       Lengpa Messiah’n a um piuve,
+       Lhasa aminthengte jouse chu,
+       Toh aleng khom ui.
+
+2. Golgatha lhang chunga chun namtin dingin, 
+   Pa Yah chun achapa Yahshua apei,
+   Michonse keima huhhing(2x) dingin,
+   Kumsang lenggam a dingin.
+
+3. Tun zion khopi sung chu em hoisel,
+   Kelngoi nou chu avah jing tan ahi,
+   Isreal te chu akim(2x) tauve,
+   Kot som le ni hoija chun.
+
+4. Nanung kahin jui na koulhen namiten,
+   Akhonni geijin jong nei poi jingun,
+   Song mantam lal loupi chu(2x) ahi,
+   Ki san ding chu ahiye.`,
+
+         "HATCHUNGNUNG ELO": `
+1.  Hatchungnung Elo, 
+    Ni gup sungin natoh ding na chaiyin, 
+    Ni sagi lhinnin na choldo tai,
+    A tonsot a din na suthengin, 
+    Phatthei naboh tai.
+
+         Na khut them thil kidan jeh in, 
+         Ka vahchoiye ka vahchoiye Elohim Yahweh,
+         Nachate na melchihna ahi Sabbath nikho hi.
+
+2.  Pa thupeh bangin,
+     Ni gup sunga tohding chan toh chai ding, 
+     Ni sagi Sabbath nikho vang chu,
+     Thengsel a kicholdo ding ahi,
+     Tin Pa'n aseiye.
+⁠
+3. Tonsot kitepna, 
+    Sabbath choldo nitheng ahung lhungtai,
+    Hinna ngaichat a kon kidalsen, 
+    Lung thengsel in Pa vahchoi ute, 
+    Hallelu-Yah tin.
+
+4.  Pa a kiminvo, 
+    Man a chohsa ihitauve eiho,
+    Elo Yah then banga theng ding le, 
+    Chondan thupeh neiya ihiuve,
+    Tonsot geiya din.`,
+     
+          "GELTEM UVIN": `                      GELTEM UVIN
+
+1. Geltem uvin thu loupi pen li bou a um,
+   ⁠Song mantam kiselguh chu ka neitai, 
+   Ngetle guchan asuhmang jou lou gou chu
+
+         Sumil ponge Pa Yah sumil ponge Yahshua,
+         Sumil ponge Yahrusalem khopi theng, 
+         Ken jui jing ding Torah bu a chondan ho.
+
+2. Pathen tampi setlei chunga miten ahou,
+   Pathen ho sem Pa Elohim Yah vang,
+   Aloupi pen leiset miten hethem lou.
+
+3. Lengle Pakai semang pachong tam jeng jong le, 
+   Lengho leng Pakai ho Pakai Yahshua,
+   Loupina le hatna tet jou ding umlou.
+
+4. Khopi hoile loupi atam vannoi ahin, 
+   Khopi lah a minthang Yahrusalem,
+   Asang pene Issi chenna sion Ihang.
+
+5. Leiset chihnan ajih lekhabu tam nantin, 
+   Eloah kamcheng Torah phading um lou, 
+   Agil penne leiset chihnan tet joulou.`,
+
+        "Ima jouse kagelkhom tieng leh": `                        IMA JOUSE
+
+1. Ima jouse kagelkhom tieng leh, 
+    Na selung katoh jou pouve Elo, 
+    Nitin boina meipi jing bangin,
+    Ajing e nitin lhatin kumtin in.
+
+                 Na khopi le na mite,
+                 Na minthenga kon a nasah ahi, 
+                 Asher-Ayah na khohsah jal in, 
+                 Chamna lensah in Israel sunga.
+
+2. Na min jalla kiloi khom kahiu, 
+   Aw hung lengin chamna leng chungnung pen,
+   Hung leng than lang nei lamkai jingun, 
+   Hin sem hoh in boina meipi jing ho.
+
+3. Muthim noiya lengle kahiuve,
+   Hin salvah in ka tonglam muthim ho,
+   Namin umna Zion khopi ah,
+   Neipui jing jengun kalhun kahseuvin.
+
+4. Na lampi dih kamu na diuvin, 
+   Kahin kouvui chamna Lhagaothengpen,
+   Kangai uve lamkai pa Yahshua,
+   Na gamtheng Zion ah ei puilut din.`,
+
+          "Thupeh ijat um jeng jongle": `                        THUPEH IJAT
+
+1. Thupeh ijat um jeng jongle,
+   Hinna ding le sochatna ding chu , 
+   Ngailut thupieh bou ahi.
+
+        Ngaidamna hi umlouhileh Pa Yah ,
+        Lhing jou Ponge,
+        Lhing jou ponge thungjou ponge ,
+        Zion na gamtheng ah.
+
+2. Silung gila kagel hole,
+   Mitvet a hoi kasah ho jong hi, 
+   Nang douna jeng bou ahi.
+
+3. Nitin chonset gin umpa hin,
+   Pharaoh bangin eikhang jing nom e,
+   Zion chate vang jou lou.
+
+4. Setlei chunga nasemsa te,
+   Na silung toh le nadei banga, 
+   Khankho mang ding tam puonte.
+
+5. Na deilhen tah Moshe jeng jong,
+   Na silung chu tuoh jou talouvin,
+   Canaan gam luo ding phallou.
+
+6. Kapu Abraham le Moshen,
+   Natep gamnom aluo lhon tiengleh,
+   Keijong jao dingin einem.`,
+
+          "Elo nangma nathen bangin": `                          ELO NANGMA
+
+1. Elo nangma nathen bangin,
+   Namite jong theng ding,
+   Nei hin kouna O kajah phat in kahunge, 
+   Kavon lui cheng pon bangin kabangtai. 2x
+
+             Gal sat dinga kigo atam vannoi a hin, 
+             Pa melchihna sagi ho le, 
+             Thupeh nitlou ho chu, 
+             Herod a lhengchil kit tengle, 
+             Thon louva gamdai a chamden diu ahi.
+
+2. Elo namin loupina din, 
+   Hung kichoisang loiyin, 
+   Melma dougal I sat dinga neikouna bang chun,
+   Nei na vontai nathu hemtuo chemjaam. }2x
+
+3. Pharaoh a kon puidohna chu,
+   Kelngoi thisan ahi,
+   Yahshua thisan a Ihatdamna sangthei lou chu, 
+   Thina gam a vaitham den diu ahi. }2x`,
+
+
+              "Pan adei lhan acha min dia": `                  PAN ADEI LHEN
+
+1. Pan adei lhen acha min dia, 
+   Israel phung ti a kou chu, 
+   Mite lah a lhendoh tina,
+   Nacha deilhen chu kei kachang tai.
+
+            Aw Zion kagam ngai pen nahi, 
+            Aw Yahrusalem muntheng chungnung nang bou, 
+            Itih le kahung lhung in, 
+            Na limdam noiya ki choldo tangem?
+
+2. Tunin na muntheng sunga hin, 
+   Kahung uve na lhen chomte, 
+   Neihin sangun aw Elohim,
+   Naphung lun lai cha chu kahiuve.
+
+3. Mindang umlou nachate dia, 
+   Chonna ding dang jong um deh lou,
+   Elo Chondan thulhung in kei, 
+   Tun ei lamkai tai ka masanga.`,
+
+};
+
+     
+
+
+        indexList.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target.classList.contains('index-item')) {
+                const hymnTitle = target.dataset.title;
+                selectedTitle.textContent = hymnTitle;
+                hymnContent.value = hymnLyrics[hymnTitle] || "Lyrics not available.";
+                hymnEntrySection.classList.remove('hidden');
+            }
+        });
+
+        registerBtn.addEventListener('click', () => {
+            const username = document.getElementById('register-username').value;
+            const password = document.getElementById('register-password').value;
+            if (username && password) {
+                users.push({ username, password });
+                alert('Registration successful! Please login.');
+                registerSection.classList.add('hidden');
+                loginSection.classList.remove('hidden');
+            } else {
+                alert('Please fill in both fields.');
+            }
+        });
+
+        loginBtn.addEventListener('click', () => {
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+            const userExists = users.some(user => user.username === username && user.password === password);
+            if (userExists) {
+                alert('Login successful!');
+                loginSection.classList.add('hidden');
+                contentSection.classList.remove('hidden');
+            } else {
+                alert('Invalid credentials. Please try again.');
+            }
+        });
+
+        indexLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            contentSection.classList.add('hidden');
+            indexSection.classList.remove('hidden');
+        });
+
+        // Search functionality
+        const searchContainer = document.createElement('div');
+        searchContainer.classList.add('search-container');
+        const searchInput = document.createElement('input');
+        searchInput.id = 'search-input';
+        searchInput.type = 'text';
+        searchInput.placeholder = 'LA HOL NA...';
+        const searchBtn = document.createElement('button');
+        searchBtn.id = 'search-btn';
+        searchBtn.textContent = 'Search';
+        searchContainer.appendChild(searchInput);
+        searchContainer.appendChild(searchBtn);
+        indexSection.insertBefore(searchContainer, indexList);
+
+        searchBtn.addEventListener('click', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            Array.from(indexList.children).forEach(item => {
+                if (item.textContent.toLowerCase().includes(searchTerm)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
